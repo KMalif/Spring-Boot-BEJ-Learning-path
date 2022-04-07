@@ -8,6 +8,7 @@ public class Films {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_films")
     private int id_films;
 
     @Column(name = "film_name")

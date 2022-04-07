@@ -12,7 +12,7 @@ import java.util.List;
 public interface FilmsRepository extends JpaRepository<Films, Integer> {
     Films findById(int id);
 
-    List<Films> findByShowed(boolean showed);
-
-    List<Films> findByFilmName(String filmName);
+//    List<Films> findByShowed(boolean showed);
+//
+//    List<Films> findByFilmName(String film_name);
 }
