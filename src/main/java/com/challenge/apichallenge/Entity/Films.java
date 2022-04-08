@@ -1,9 +1,12 @@
 package com.challenge.apichallenge.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "Films")
+@JsonIgnoreProperties(value = {"hibernateLazyInitializer","handler"})
 public class Films {
 
     @Id
@@ -17,6 +20,7 @@ public class Films {
     @Column(name = "showed")
     private boolean showed;
 
+    //spring.jackson.serialization.fail-on-empty-beans=false
     public Films (){}
 
     public Films(int id_films, String film_name, boolean showed) {
